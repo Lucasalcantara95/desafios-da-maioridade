@@ -6,20 +6,37 @@ Repositório oficial dos desafios de Orientação a Objetos em C#.
 
 1. **Prazo:** 7 dias corridos por desafio.
 2. **Fluxo de trabalho:**
-   - Eu crio uma branch `desafio-XX` pra você.
-   - Você trabalha **apenas nessa branch**.
-   - Quando terminar, abre um **Pull Request** pra `main`.
-   - Eu reviso, rodo o código e aprovo ou peço ajustes.
+   - Faça **fork** deste repositório para a sua conta.
+   - Clone o **seu fork** na sua máquina.
+   - Resolva o desafio, faça commit e push no seu fork.
+   - Me mande o link do seu fork para eu avaliar.
 3. **O que eu NÃO aceito:**
    - Alterar o `Program.cs` (código de teste).
-   - Commits gigantes do tipo "resolvi tudo" depois de 6 dias parado.
    - Código que não compila ou output diferente do esperado.
-   - Push direto na `main` (só via PR).
-4. **Progressão:** só abro o próximo desafio quando o anterior for **mergado na main**.
-5. **Commits:** faça commits pequenos e descritivos conforme for evoluindo. Ex:
-   - `cria estrutura da classe`
-   - `implementa método de conversao`
-   - `corrige bug no calculo`
+4. **Progressão:** só libero o próximo desafio quando o anterior estiver **aprovado**.
+
+## 🔄 Como sincronizar seu fork quando eu adicionar novos desafios
+
+Quando eu adicionar um novo desafio neste repositório, você precisa atualizar o seu fork. Tem dois jeitos:
+
+### Jeito fácil (pelo site do GitHub)
+1. Entre no **seu fork** no GitHub.
+2. Clique no botão **"Sync fork"** → **"Update branch"**.
+3. Na sua máquina, rode: `git pull origin main`
+
+### Jeito via linha de comando (recomendado)
+Configure uma vez só o repositório original como upstream:
+```bash
+git remote add upstream https://github.com/SEU-USUARIO/mentoria-csharp.git
+```
+
+Sempre que eu adicionar um desafio novo, rode:
+```bash
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+```
 
 ## 📂 Estrutura
 
@@ -34,8 +51,6 @@ Cada desafio vive em `desafios/XX-nome-do-desafio/`:
 cd desafios/01-conversor-temperatura
 dotnet run
 ```
-
-Ou use o [.NET Fiddle](https://dotnetfiddle.net/) se preferir testar rápido.
 
 ---
 
