@@ -17,7 +17,7 @@ class ConversorTemperatura
     // Sua implementação vai aqui
     public double CelsiusParaFahrenheit(double c1)
     {
-        Console.WriteLine("Abaixo estão os resultado retornado pelo método:");
+        Console.WriteLine("Abaixo estão os resultados retornados pelo método:");
         return c1 * 1.8 + 32;
     }
 }
