@@ -10,7 +10,14 @@ using System;
 //   var conversor = new ConversorTemperatura();
 //   double f = conversor.CelsiusParaFahrenheit(100); // deve retornar 212
 
+
+
 class ConversorTemperatura
 {
     // Sua implementação vai aqui
+    public double CelsiusParaFahrenheit(double c1)
+    {
+        Console.WriteLine("Abaixo estão os resultado retornado pelo método:");
+        return c1 * 1.8 + 32;
+    }
 }
