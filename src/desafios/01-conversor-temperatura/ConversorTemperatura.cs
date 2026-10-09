@@ -13,4 +13,8 @@ using System;
 class ConversorTemperatura
 {
     // Sua implementação vai aqui
+    public double CelsiusParaFahrenheit(double celsius)
+    {
+        return celsius * 1.8 + 32;
+    }
 }

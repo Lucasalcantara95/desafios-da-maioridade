@@ -1,4 +1,5 @@
 using System;
+using System.Reflection.Metadata.Ecma335;
 
 // TODO: Implemente a classe ContaBancaria aqui.
 //
@@ -19,4 +20,26 @@ using System;
 class ContaBancaria
 {
     // Sua implementação vai aqui
+    public string? Titular {get; set;}
+
+    public decimal Saldo {get; set;}
+
+
+    public void Depositar(decimal valor)
+    {
+        Saldo += valor;
+    }
+
+
+    public bool Sacar(decimal valor)
+    {
+        if (Saldo >= valor)
+        {
+            Saldo -= valor;
+            return true;
+        }
+
+        return false;
+    }
+
 }

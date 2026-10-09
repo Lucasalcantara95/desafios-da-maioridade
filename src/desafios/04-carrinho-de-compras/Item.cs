@@ -15,4 +15,15 @@ using System;
 class Item
 {
     // Sua implementação vai aqui
+    public string? Nome {get; set;}
+
+    public decimal PrecoUnitario {get; set;}
+
+    public int Quantidade {get; set;}
+
+
+    public decimal GetSubtotal()
+    {
+        return PrecoUnitario * Quantidade;
+    }
 }

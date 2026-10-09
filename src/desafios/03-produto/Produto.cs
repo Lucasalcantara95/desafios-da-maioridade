@@ -23,4 +23,41 @@ using System;
 class Produto
 {
     // Sua implementação vai aqui
+
+    public string? Nome { get; set; }
+    private decimal _preco { get; set; }
+
+    public decimal Preco
+    {
+
+        get { return _preco; }
+        set
+        {
+            if (value >= 0m)
+            {
+                _preco = value;
+        }
+        }
+    }
+
+
+    public void AplicarDesconto(decimal percentual)
+    {
+        if (percentual >= 0m && percentual <= 100m)
+        {
+            _preco = _preco - (_preco *(percentual /100m));
+        }
+    }
+
+
+
+    public decimal GetPrecoComDesconto (decimal percentual)
+    {
+        if (percentual >= 0m && percentual <= 100m)
+        {
+            return _preco - (_preco *(percentual / 100m));
+        }
+
+        return _preco;
+    }
 }
